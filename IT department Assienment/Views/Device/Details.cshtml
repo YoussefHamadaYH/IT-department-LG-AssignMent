@@ -1,0 +1,27 @@
+﻿@model IT_department_Assienment.Models.Device
+
+@{
+    ViewData["Title"] = "Device Details";
+}
+
+<div class="container mt-4">
+    <h1>Device Details</h1>
+    <div>
+        <h4>Device Information</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Name)</dt>
+            <dd class="col-sm-10">@Html.DisplayFor(model => model.Name)</dd>
+            <dt class="col-sm-2">@Html.DisplayNameFor(model => model.AcquisitionDate)</dt>
+            <dd class="col-sm-10">@Html.DisplayFor(model => model.AcquisitionDate)</dd>
+            <dt class="col-sm-2">@Html.DisplayNameFor(model => model.Memo)</dt>
+            <dd class="col-sm-10">@Html.DisplayFor(model => model.Memo)</dd>
+            <dt class="col-sm-2">@Html.DisplayNameFor(model => model.DeviceCategory)</dt>
+            <dd class="col-sm-10">@Html.DisplayFor(model => model.DeviceCategory.Id)</dd>
+        </dl>
+    </div>
+    <div class="text-center">
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-warning">Edit</a>
+        <a asp-action="GetAllDevices" class="btn btn-secondary">Back to List</a>
+    </div>
+</div>
